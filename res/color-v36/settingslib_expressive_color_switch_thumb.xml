@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
-     Cyclon "Words": the kit's switch thumb, white (light) or black (dark) on the ink track when on, ink on the grey
-     track when off.
+     Cyclon Glass: the kit's switch knob (components.css .switch::after), as in Settings: white on the grey track
+     when off, the on-primary colour on the primary track when on. Overrides SettingsLib's.
 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:alpha="0.38"
-        android:color="@color/cyclon_words_fg"
+        android:color="@color/glass_knob"
         android:state_enabled="false" android:state_checked="false"/>
     <item
-        android:alpha="0.38"
-        android:color="@color/cyclon_words_inv"
+        android:color="@color/glass_on_primary"
         android:state_enabled="false" android:state_checked="true"/>
     <item
-        android:color="@color/cyclon_words_inv"
+        android:color="@color/glass_on_primary"
         android:state_checked="true"/>
     <item
-        android:color="@color/cyclon_words_fg"/>
+        android:color="@color/glass_knob"/>
 </selector>

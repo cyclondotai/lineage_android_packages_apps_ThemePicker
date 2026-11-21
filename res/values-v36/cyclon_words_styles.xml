@@ -2,8 +2,9 @@
 <!--
      Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
      Cyclon "Words": the picker's switches (clock size, dark theme, themed icons, app labels) use SettingsLib's
-     expressive switch style; ThemePicker replaces it with the kit's pill switch: ink when on with a white (light) or
-     black (dark) thumb, grey when off with an ink thumb, no check or close glyph (the thumb icon is blank, which keeps
+     expressive switch style; ThemePicker replaces it with the kit's pill switch, as in Settings: the primary track
+     with the on-primary knob when on, the grey track with a white knob when off
+     (color-v36/settingslib_expressive_color_switch_*), no check or close glyph (the thumb icon is blank, which keeps
      the thumb 24dp in both states) and no outline. Otherwise as SettingsLib's style.
 -->
 <resources>
