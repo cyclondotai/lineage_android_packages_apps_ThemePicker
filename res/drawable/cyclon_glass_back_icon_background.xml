@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
+     Cyclon Glass: the back pill's chevron has no disc of its own (the pill's glass_btn is its fill). WallpaperPicker2's
+     DefaultToolbarBinder tints nav_button_icon's background, so it must be a drawable: a transparent shape, which
+     stays transparent under any tint.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+</shape>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
+     Cyclon Glass: on an option's screen (Clock, Shortcuts, ...) WallpaperPicker2's DefaultToolbarBinder puts this in
+     the toolbar's back pill in place of the main screen's back mark; the pill reads "‹ Back" on every screen, as on
+     Settings' pages, so this is the same chevron as ic_arrow_back_24dp (the only place WallpaperPicker2 and ThemePicker
+     use ic_close_24dp). The binder tints it.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20"
+    android:tint="@color/system_on_surface_variant"
+    android:autoMirrored="true">
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M12.5,4L6.5,10L12.5,16"/>
+</vector>

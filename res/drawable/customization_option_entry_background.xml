@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
-     Cyclon "Words" (the UI kit's rows): an option inside a group is a flat row on the page, with
-     a faint line under it, inset like the text, to the next option.
+     Cyclon Glass, as on Settings' pages: Wallpaper & style's options (Clock, Shortcuts, Notifications on lock screen,
+     ...) are one frosted card per group (components.css .list), the library's card slices (glass_card_*_open, which
+     reach 1dp past the row where it meets the next one; the options' LinearLayout clips them, so the group has one
+     edge around it), with a hairline between two options from where their words start to the card's end edge.
+     An option inside a group: the card's middle, with a hairline under it.
 -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@color/ripple_material">
+    android:color="@color/glass_ripple">
     <item android:id="@android:id/mask">
-        <color android:color="@android:color/white" />
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+        </shape>
     </item>
-    <item>
-        <color android:color="@android:color/transparent" />
-    </item>
+    <item android:drawable="@drawable/glass_card_middle_open" />
     <item
         android:gravity="bottom|fill_horizontal"
-        android:height="1dp"
-        android:start="@dimen/customization_option_entry_horizontal_padding"
-        android:end="@dimen/customization_option_entry_horizontal_padding">
-        <color android:color="@color/cyclon_words_line" />
+        android:height="@dimen/cyclon_glass_row_hair"
+        android:start="@dimen/customization_option_entry_horizontal_padding">
+        <color android:color="@color/glass_hair" />
     </item>
 </ripple>

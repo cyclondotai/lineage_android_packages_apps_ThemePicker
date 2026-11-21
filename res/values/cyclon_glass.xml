@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2026 TextGavel. Licensed under the Apache License, Version 2.0.
+     Cyclon Glass for Wallpaper & style, as on the Settings pages that open it: Home's back pill in the picker's toolbar
+     (layout/customization_picker2_toolbar) and each group of options in one frosted card
+     (drawable/customization_option_entry_*_background). Colours, drawables and Geist come from cyclon-shell-ui-glass
+     (glass_*); the sizes here only place ThemePicker's own views, as Settings' res/values/cyclon_glass.xml does.
+-->
+<resources>
+    <!-- The options of a group touch, so they read as one card with hairlines between them, not as slices 2dp apart
+         (WallpaperPicker2's customization_option_entry_divider is this tall). -->
+    <dimen name="customization_option_entry_divider_height">0dp</dimen>
+
+    <!-- The back pill: 44dp tall (glass_control_height), 8dp before the 24dp chevron, 2dp between it and the word, 18dp
+         after the word. -->
+    <dimen name="cyclon_glass_back_padding_start">8dp</dimen>
+    <dimen name="cyclon_glass_back_padding_end">18dp</dimen>
+    <dimen name="cyclon_glass_back_icon">24dp</dimen>
+    <!-- 8dp + 24dp + 2dp: where the word starts. -->
+    <dimen name="cyclon_glass_back_text_start">34dp</dimen>
+
+    <!-- A hairline between two options of a card. -->
+    <dimen name="cyclon_glass_row_hair">1dp</dimen>
+
+    <!-- Home's back pill (components.css .back-pill): the library's TextAppearance.Glass.BackPill (500, 15, tracked
+         -0.005em), in ink. -->
+    <style name="TextAppearance.CyclonGlass.BackPill" parent="@style/TextAppearance.Glass.BackPill">
+        <item name="android:textColor">@color/glass_ink</item>
+    </style>
+
+    <!-- The word on the picker's back pill, which goes back like the key it replaces, as on Settings' pages. -->
+    <string name="cyclon_glass_back">Back</string>
+</resources>
