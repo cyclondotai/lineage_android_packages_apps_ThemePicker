@@ -143,8 +143,29 @@ prebuilt_etc {
 //
 // Build app code.
 //
-android_app {
+// ThemePicker's versionCode in a Cyclon image is the image's build time (vendor/cyclon's android/Core/cyclon.mk sets
+// cyclon.fork_app_version_code), like Cyclon Core's and Dialer's: Core updates ThemePicker from Cyclon's signed app
+// feed between OS releases with a build coded just above the image's (CYC-2816), and every image built later
+// replaces that update on its OTA. The manifest has no versionCode for aapt2 to keep.
+soong_config_module_type {
+    name: "cyclon_themepicker_android_app",
+    module_type: "android_app",
+    config_namespace: "cyclon",
+    value_variables: ["fork_app_version_code"],
+    properties: ["aaptflags"],
+}
+
+cyclon_themepicker_android_app {
     name: "ThemePicker",
+    soong_config_variables: {
+        fork_app_version_code: {
+            aaptflags: ["--version-code", "%s"],
+            // A product without Cyclon's cyclon.mk: Soong's default, the platform SDK version.
+            conditions_default: {
+                aaptflags: ["--version-code", "37"],
+            },
+        },
+    },
     package_name: "com.android.wallpaper",
     defaults: ["ThemePicker_defaults_with_overrides"],
 
